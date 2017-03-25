@@ -17,7 +17,7 @@ syn match   shaderTestComment    "#.*" contains=shaderTestTodo
 syn keyword shaderTestExtensionAction contained enable disable
 syn region shaderTestExtension matchgroup=shaderTestExtensionStart start=/^#extension / end=/$/ contains=shaderTestExtensionAction,shaderTestIdentifier
 
-syn region shaderTestRequireSection matchgroup=shaderTestSection start="^\[require\]$" end=/^\[[a-z0-9 ]\+\]$/re=s-1,he=s-1 contains=shaderTestIdentifier,glslType,glslQualifier,shaderTestBoolean,shaderTestNumber
+syn region shaderTestRequireSection matchgroup=shaderTestSection start="^\[require\]$" end=/^\[[a-z0-9 ]\+\]$/re=s-1,he=s-1 contains=shaderTestIdentifier,glslType,glslQualifier,shaderTestNumber
 syn match shaderTestVertexShaderPassthrough display "^\[vertex shader passthrough\]$"
 
 syn include @glsl syntax/glsl.vim
