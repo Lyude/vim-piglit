@@ -9,7 +9,7 @@ syn match   shaderTestIdentifier display contained "\h\w*"
 syn keyword shaderTestBoolean    contained true false
 syn keyword shaderTestTodo       contained TODO FIXME XXX NOTE
 syn match   shaderTestNumber     display contained /\<\d\+\%(\.\d\+\)\?\>/
-syn match   shaderTestComment    "#.*" contains=shaderTestTodo
+syn match   shaderTestComment    "#.*" contains=shaderTestTodo containedin=ALL
 
 " All of the sections that can be found in a piglit shader test
 " To add a new one, make sure to use the end expression:
