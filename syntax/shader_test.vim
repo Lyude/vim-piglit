@@ -5,6 +5,9 @@ if exists("b:current_syntax")
 	finish
 endif
 
+" Shader tests don't get very long, so this should be safe
+syn sync fromstart
+
 syn match   shaderTestIdentifier display contained "\h\w*"
 syn keyword shaderTestBoolean    contained true false
 syn keyword shaderTestTodo       contained TODO FIXME XXX NOTE
