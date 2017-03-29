@@ -17,9 +17,6 @@ syn match   shaderTestComment    "#.*" contains=shaderTestTodo containedin=ALL
 " All of the sections that can be found in a piglit shader test
 " To add a new one, make sure to use the end expression:
 "   end=/^\[[a-z0-9 ]\+\]$/re=s-1,he=s-1
-syn keyword shaderTestExtensionAction contained enable disable
-syn region shaderTestExtension matchgroup=shaderTestExtensionStart start=/^#extension / end=/$/ contains=shaderTestExtensionAction,shaderTestIdentifier
-
 syn region shaderTestRequireSection matchgroup=shaderTestSection start="^\[require\]$" end=/^\[[a-z0-9 ]\+\]$/re=s-1,he=s-1 contains=shaderTestIdentifier,glslType,glslQualifier,shaderTestNumber
 syn match shaderTestVertexShaderPassthrough display "^\[vertex shader passthrough\]$"
 
@@ -71,9 +68,6 @@ hi def link shaderTestSection                 Special
 hi def link shaderTestVertexDataVar           Identifier
 hi def link shaderTestTodo                    Todo
 hi def link shaderTestComment                 Comment
-hi def link shaderTestExtension               PreProc
-hi def link shaderTestExtensionStart          PreProc
-hi def link shaderTestExtensionAction         Boolean
 hi def link shaderTestTestCommand             Function
 
 if !exists("b:current_syntax")
